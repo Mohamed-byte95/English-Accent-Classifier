@@ -25,8 +25,8 @@ A simple Streamlit-based web app for classifying spoken English accents using Sp
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/accent-detector.git
-cd accent-detector
+git clone https://github.com/Mohamed-byte95/English-Accent-Classifier.git
+cd English-Accent-Classifier
 
 # Create virtual environment
 python -m venv .venv
