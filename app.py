@@ -1,6 +1,5 @@
-# app.py
+
 import os
-os.environ["PYTORCH_NO_CUSTOM_CLASS_WARNING"] = "1"
 import streamlit as st
 from accent_main  import download_and_extract_audio, classify_accent, check_ffmpeg, AUDIO_FILENAME
 

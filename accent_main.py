@@ -1,5 +1,4 @@
 import os
-os.environ["PYTORCH_NO_CUSTOM_CLASS_WARNING"] = "1"
 import argparse
 import subprocess
 
