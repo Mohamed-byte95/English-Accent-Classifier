@@ -1,0 +1,2 @@
+[watcher]
+exclude_patterns = ["*/torch/classes/*", "*/torch/*_C*", "*/torchaudio/*", "*/speechbrain/*"]
