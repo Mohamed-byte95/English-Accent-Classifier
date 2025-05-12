@@ -2,6 +2,7 @@ import argparse
 import subprocess
 import os
 import shutil # For checking ffmpeg path
+import streamlit as st
 
 # Attempt to import PyTorch and related libraries early to catch missing installations.
 try:
@@ -163,6 +164,8 @@ def classify_accent(audio_file_path):
 
 def main():
     # Check if Hugging Face token is set
+    hf_token = st.secrets["huggingface"]["token"]
+    HfFolder.save_token(hf_token)
     HfFolder.save_token(HfFolder.get_token() or "")
     
 
