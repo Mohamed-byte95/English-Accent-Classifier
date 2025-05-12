@@ -1,6 +1,8 @@
+import os
+os.environ["PYTORCH_NO_CUSTOM_CLASS_WARNING"] = "1"
 import argparse
 import subprocess
-import os
+
 import shutil # For checking ffmpeg path
 import streamlit as st
 
@@ -129,7 +131,7 @@ def classify_accent(audio_file_path):
         if signal.ndim == 1:
             signal = signal.unsqueeze(0)
 
-        out_prob, text_lab = classifier.classify_batch(signal)
+        out_prob, score, index, text_lab = classifier.classify_batch(signal)
         
 
         predicted_label_short = text_lab[0]
@@ -164,8 +166,8 @@ def classify_accent(audio_file_path):
 
 def main():
     # Check if Hugging Face token is set
-    hf_token = st.secrets["huggingface"]["token"]
-    HfFolder.save_token(hf_token)
+    #hf_token = st.secrets["huggingface"]["token"]
+    #HfFolder.save_token(hf_token)
     HfFolder.save_token(HfFolder.get_token() or "")
     
 

@@ -1,10 +1,12 @@
 # app.py
+import os
+os.environ["PYTORCH_NO_CUSTOM_CLASS_WARNING"] = "1"
 import streamlit as st
 from accent_main  import download_and_extract_audio, classify_accent, check_ffmpeg, AUDIO_FILENAME
-import os
 
-hf_token = st.secrets["huggingface"]["token"]
-st.set_page_config(page_title="English Accent Classifier", layout="centered")
+
+#hf_token = st.secrets["huggingface"]["token"]
+#st.set_page_config(page_title="English Accent Classifier", layout="centered")
 st.title("🎤 English Accent Classifier")
 st.markdown("""
 This tool analyzes a speaker's English accent from a public video URL (e.g., YouTube, Loom, direct .mp4).
