@@ -104,7 +104,7 @@ def classify_accent(audio_file_path):
     print("(This may take a few minutes on the first run as the model is downloaded.)")
     
     # Determine device
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+    device = torch.device('cpu')
     print(f"Using device: {device}")
 
     try:
@@ -128,7 +128,7 @@ def classify_accent(audio_file_path):
         if signal.ndim == 1:
             signal = signal.unsqueeze(0)
 
-        out_prob, score, index, text_lab = classifier.classify_batch(signal)
+        out_prob, text_lab = classifier.classify_batch(signal)
         
 
         predicted_label_short = text_lab[0]
