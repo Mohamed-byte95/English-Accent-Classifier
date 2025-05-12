@@ -7,3 +7,4 @@ torchaudio>=2.1.0
 speechbrain>=0.5.15
 pydub>=0.25.1
 huggingface_hub
+yt_dlp
