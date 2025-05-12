@@ -6,7 +6,6 @@ import shutil # For checking ffmpeg path
 # Attempt to import PyTorch and related libraries early to catch missing installations.
 try:
     import torch
-    import torchaudio
     from speechbrain.inference.classifiers import EncoderClassifier
     from huggingface_hub import HfFolder 
 except ImportError as e:
